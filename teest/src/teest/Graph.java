@@ -63,8 +63,8 @@ public class Graph {
           
           int followers;
           ArrayList<Integer> n = graph.get(k);
-          followers = n.size()-1;               
-          return followers;
+          followers = n.size()-1;               //we select last index of each arraylist for counter of followers in this arraylist
+          return followers;                    //return number of followers for this account 
           
         }
       
