@@ -67,13 +67,15 @@ public class Graph {
   public void TopInfluencer(int i) {
 
     Set<Integer> Kset = graph.keySet();
-    ArrayList<Integer> sortFollowers = new ArrayList<Integer>();
+    ArrayList<Integer> sortFollowers = new ArrayList<Integer>(); // Create ArrayList that carry number of followers for
+                                                                 // each account(key)
 
     for (Object j : Kset) {
 
       ArrayList<Integer> value;
-      value = graph.get(j);
-      int c = value.remove(value.size() - 1);
+      value = graph.get(j); // Store list of followers for each key per itretion
+      int c = value.remove(value.size() - 1); // Get the Number of follwers for each key that always in the last of the
+                                              // list
       sortFollowers.add(c);
 
       obj e = new obj((Integer) j, c);
@@ -83,14 +85,16 @@ public class Graph {
 
     }
 
-    Collections.sort(sortFollowers); // Built in sort time complexity is O(n*log(n))
+    Collections.sort(sortFollowers); // Built in sort time complexity is O(n*log(n)) - Sort Element in ascending
+                                     // order
 
-    int f = sortFollowers.get(sortFollowers.size() - i);
+    int f = sortFollowers.get(sortFollowers.size() - i); // Store the number of followers for the key i passed to the
+                                                         // function in f
 
-    for (obj element : Key_followers) {
-
-      if (element.counter == f) {
-
+    for (obj element : Key_followers) { // As sorting number of followers calculated seperately
+                                        // we need to get the key related to that number of followers that stored in f.
+      if (element.counter == f) { // by looping on each key stored in key_followers(array of objects that carry
+                                  // the key and the number of its followers(counter)).
         int k = element.key;
 
         key = k;
