@@ -25,7 +25,7 @@ public class Teest {
         String file = "teest\\twitter.csv";  //path
         BufferedReader reader = null;     
         String line = "";
-        Graph graph = new Graph(); //creating a object from graph
+       
 
         try {
             reader = new BufferedReader(new FileReader(file));  //reading the csv file 
