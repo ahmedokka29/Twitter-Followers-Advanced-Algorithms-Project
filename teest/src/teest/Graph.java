@@ -37,10 +37,10 @@ public class Graph {
                    
              }
          }   
-        
-        else {
+            
+        else {                                                      //if account id  isn't exist 
             ArrayList<Integer> followers = new ArrayList<Integer>();
-            followers.add(v);
+            followers.add(v);                                       
             followers.add(1);
             graph.put(k, followers);
             followers=null;
