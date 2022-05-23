@@ -6,105 +6,98 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Set;
 
-
 public class Graph {
-    
-    public int counter=0;
-    int key;                      
-    Map<Integer,ArrayList<Integer>> graph = new HashMap<Integer,ArrayList<Integer>>();
-    ArrayList<Integer> list = new ArrayList<Integer>() ;                                       
-    ArrayList<obj> Key_followers = new ArrayList<obj>() ; 
-    
-    
-    // Build HashMap
-    
-     public void addEdge(int k, int v) {
-        
 
-        if(graph.containsKey(k)) {                  //check if account id is already exist (added before)
-            
-            ArrayList<Integer> followers ;
-            followers = graph.get(k);               //get arraylist of his followers 
-            
-            if (!followers.contains(v)){            //check if this follower isn't already added before in arraylist
-                
-                counter=followers.remove(followers.size()-1);       //get number of followers for this account (we select last index of each arraylist for counter of followers in this arraylist)
-                followers.add(v);                                     //add follower id
+  public int counter = 0;
+  int key;
+  Map<Integer, ArrayList<Integer>> graph = new HashMap<Integer, ArrayList<Integer>>();
+  ArrayList<Integer> list = new ArrayList<Integer>();
+  ArrayList<obj> Key_followers = new ArrayList<obj>();
 
-                counter++;                                          //number of followers++
-                followers.add(counter);                             //add counter at last index of arraylist after updating number of followers
-                graph.put(k, followers);                            //add account id and arraylist of his followers in " key / value " pairs 
-                   
-             }
-         }   
-            
-        else {                                                      //if account id isn't exist 
-            ArrayList<Integer> followers = new ArrayList<Integer>();
-            followers.add(v);                                        //add follower id
-            followers.add(1);                                        //number of followers=1
-            graph.put(k, followers);                                 //add account id and arraylist of his followers in " key / value " pairs 
-            followers=null;
-        }
-        
-                          
+  // Build HashMap
+
+  public void addEdge(int k, int v) {
+
+    if (graph.containsKey(k)) { // check if account id is already exist (added before)
+
+      ArrayList<Integer> followers;
+      followers = graph.get(k); // get arraylist of his followers
+
+      if (!followers.contains(v)) { // check if this follower isn't already added before in arraylist
+
+        counter = followers.remove(followers.size() - 1); // get number of followers for this account (we select last
+                                                          // index of each arraylist for counter of followers in this
+                                                          // arraylist)
+        followers.add(v); // add follower id
+
+        counter++; // number of followers++
+        followers.add(counter); // add counter at last index of arraylist after updating number of followers
+        graph.put(k, followers); // add account id and arraylist of his followers in " key / value " pairs
+
+      }
     }
-     
-  
-     
-      public int sizee(){         // Number of accounts                                             
-       
-          Set<Integer> s = graph.keySet();
-          return s.size();
-          
-        }
-      
-      
-      public int num_followers(int k){         // NUMBER OF FOLLOWERS FOR SPECIFIC ACCOUNT
-          
-          int followers;
-          ArrayList<Integer> n = graph.get(k);
-          followers = n.size()-1;               //we select last index of each arraylist for counter of followers in this arraylist
-          return followers;                    //return number of followers for this account 
-          
-        }
-      
-     
-      public void TopInfluencer(int i){                 
-          
-         Set<Integer>Kset =graph.keySet();
-         ArrayList<Integer> sortFollowers = new ArrayList<Integer>() ;
-         
-       for(Object j : Kset ){
-            
-            ArrayList<Integer> value ;
-            value = graph.get(j);
-            int c = value.remove(value.size()-1);
-            sortFollowers.add(c);
-            
-            obj e = new obj((Integer)j,c);
-            Key_followers.add(e);
-            value.add(c);
-            graph.put((Integer)j, value);
 
-            
-          }
-       
-       Collections.sort(sortFollowers);
-       
-       
-       int f = sortFollowers.get(sortFollowers.size()-i);
-       
-        for(obj element : Key_followers){
-            
-            if (element.counter==f) {
-                
-                int k = element.key;
-                
-                key=k;
-            }
-          }
-               
-        System.out.println(key+"  has  "+f+"  Followers ");
+    else { // if account id isn't exist
+      ArrayList<Integer> followers = new ArrayList<Integer>();
+      followers.add(v); // add follower id
+      followers.add(1); // number of followers=1
+      graph.put(k, followers); // add account id and arraylist of his followers in " key / value " pairs
+      followers = null;
     }
-    
+
+  }
+
+  public int sizee() { // Number of accounts
+
+    Set<Integer> s = graph.keySet();
+    return s.size();
+
+  }
+
+  public int num_followers(int k) { // NUMBER OF FOLLOWERS FOR SPECIFIC ACCOUNT
+
+    int followers;
+    ArrayList<Integer> n = graph.get(k);
+    followers = n.size() - 1; // we select last index of each arraylist for counter of followers in this
+                              // arraylist
+    return followers; // return number of followers for this account
+
+  }
+
+  public void TopInfluencer(int i) {
+
+    Set<Integer> Kset = graph.keySet();
+    ArrayList<Integer> sortFollowers = new ArrayList<Integer>();
+
+    for (Object j : Kset) {
+
+      ArrayList<Integer> value;
+      value = graph.get(j);
+      int c = value.remove(value.size() - 1);
+      sortFollowers.add(c);
+
+      obj e = new obj((Integer) j, c);
+      Key_followers.add(e);
+      value.add(c);
+      graph.put((Integer) j, value);
+
+    }
+
+    Collections.sort(sortFollowers); // Built in sort time complexity is O(n*log(n))
+
+    int f = sortFollowers.get(sortFollowers.size() - i);
+
+    for (obj element : Key_followers) {
+
+      if (element.counter == f) {
+
+        int k = element.key;
+
+        key = k;
+      }
+    }
+
+    System.out.println(key + "  has  " + f + "  Followers ");
+  }
+
 }
