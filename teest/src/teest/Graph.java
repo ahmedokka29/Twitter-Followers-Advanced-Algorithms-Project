@@ -26,13 +26,13 @@ public class Graph {
             ArrayList<Integer> followers ;
             followers = graph.get(k);               //get arraylist of his followers 
             
-            if (!followers.contains(v)){            //check if this follower is already added before
+            if (!followers.contains(v)){            //check if this follower isn't already added before
                 
-                counter=followers.remove(followers.size()-1);       //we select last index of each arraylist for counter of followers in this arraylist
-                followers.add(v);
+                counter=followers.remove(followers.size()-1);       //get number of followers for this account (we select last index of each arraylist for counter of followers in this arraylist)
+                followers.add(v);                                     //add follower id
 
                 counter++;                                          
-                followers.add(counter); 
+                followers.add(counter);                           
                 graph.put(k, followers);
                    
              }
