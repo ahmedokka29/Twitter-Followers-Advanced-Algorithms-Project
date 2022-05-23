@@ -28,7 +28,7 @@ public class Graph {
             
             if (!followers.contains(v)){            //check if this follower is already added before
                 
-                counter=followers.remove(followers.size()-1);       
+                counter=followers.remove(followers.size()-1);       //we select last index of each arraylist for counter of followers in this arraylist
                 followers.add(v);
 
                 counter++;                                          
