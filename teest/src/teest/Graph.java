@@ -40,9 +40,9 @@ public class Graph {
             
         else {                                                      //if account id isn't exist 
             ArrayList<Integer> followers = new ArrayList<Integer>();
-            followers.add(v);                                       
-            followers.add(1);
-            graph.put(k, followers);
+            followers.add(v);                                        //add follower id
+            followers.add(1);                                        //number of followers=1
+            graph.put(k, followers);                                 //add account id and arraylist of his followers in " key / value " pairs 
             followers=null;
         }
         
