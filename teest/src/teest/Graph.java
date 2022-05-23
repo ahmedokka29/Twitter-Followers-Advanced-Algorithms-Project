@@ -21,17 +21,17 @@ public class Graph {
      public void addEdge(int k, int v) {
         
 
-        if(graph.containsKey(k)) {  
+        if(graph.containsKey(k)) {                  //check if account id is already exist (added before)
             
             ArrayList<Integer> followers ;
-            followers = graph.get(k);
+            followers = graph.get(k);               //get arraylist of his followers 
             
-            if (!followers.contains(v)){
+            if (!followers.contains(v)){            //check if this follower is already added before
                 
-                counter=followers.remove(followers.size()-1);
+                counter=followers.remove(followers.size()-1);       
                 followers.add(v);
 
-                counter++;
+                counter++;                                          
                 followers.add(counter); 
                 graph.put(k, followers);
                    
