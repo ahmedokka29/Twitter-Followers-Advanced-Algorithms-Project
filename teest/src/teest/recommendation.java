@@ -7,12 +7,14 @@ public class recommendation {
 
     public int MaxLength(int id1, int id2, ArrayList<Integer> account1, ArrayList<Integer> account2, int m, int n) {
 
-        if (!account2.contains(id1)) {
+        if (!account2.contains(id1)) { 
 
-            int[][] dp = new int[m + 1][n + 1];
+            int[][] dp = new int[m + 1][n + 1]; // create a matrix which act as a table for LCS
+            
+            // fill the table in the bottom up way
             for (int i = 0; i <= m; i++)
                 for (int j = 0; j <= n; j++)
-                    dp[i][j] = 0;
+                    dp[i][j] = 0; // Fill each cell corresponding to first row and first column with 0  
 
             for (int i = m - 1; i >= 0; i--) {
                 for (int j = n - 1; j >= 0; j--) {
