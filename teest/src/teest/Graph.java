@@ -38,7 +38,7 @@ public class Graph {
              }
          }   
             
-        else {                                                      //if account id  isn't exist 
+        else {                                                      //if account id isn't exist 
             ArrayList<Integer> followers = new ArrayList<Integer>();
             followers.add(v);                                       
             followers.add(1);
@@ -51,7 +51,7 @@ public class Graph {
      
   
      
-      public int sizee(){                                                  
+      public int sizee(){         // Number of accounts                                             
        
           Set<Integer> s = graph.keySet();
           return s.size();
@@ -59,17 +59,17 @@ public class Graph {
         }
       
       
-      public int num_followers(int k){
+      public int num_followers(int k){         // NUMBER OF FOLLOWERS FOR SPECIFIC ACCOUNT
           
           int followers;
           ArrayList<Integer> n = graph.get(k);
-          followers = n.size()-1;
+          followers = n.size()-1;               
           return followers;
           
         }
       
      
-      public void TopInfluencer(int i){
+      public void TopInfluencer(int i){                 
           
          Set<Integer>Kset =graph.keySet();
          ArrayList<Integer> sortFollowers = new ArrayList<Integer>() ;
