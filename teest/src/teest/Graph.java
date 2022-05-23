@@ -69,6 +69,7 @@ public class Graph {
     Set<Integer> Kset = graph.keySet();
     ArrayList<Integer> sortFollowers = new ArrayList<Integer>(); // Create ArrayList that carry number of followers for each account(key)
 
+    // Complexity O(n) where n is the number of element in the Kset Set
     for (Object j : Kset) {
 
       ArrayList<Integer> value;
@@ -83,15 +84,15 @@ public class Graph {
 
     }
 
-    Collections.sort(sortFollowers); // Built in sort time complexity is O(n*log(n)) - Sort Element in ascending
-                                     // order
+    Collections.sort(sortFollowers); // Built in sort time complexity is O(n*log(n)) - Sort Element in ascending order
 
     int f = sortFollowers.get(sortFollowers.size() - i); // Store the number of followers for the key i passed to the function in f.
     
     
-// As sorting number of followers calculated seperately, we need to get the key related to that number of followers that stored in f.
-// by looping on each key stored in key_followers(array of objects that carry the key and the number of its followers(counter).
+    // As sorting number of followers calculated seperately, we need to get the key related to that number of followers that stored in f.
+    // by looping on each key stored in key_followers(array of objects that carry the key and the number of its followers(counter).
    
+    // Complexity O(n) where n is the number of element in the Key_followers Arraylist
     for (obj element : Key_followers) { 
       if (element.counter == f) { 
         int k = element.key;
