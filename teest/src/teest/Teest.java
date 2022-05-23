@@ -20,24 +20,24 @@ public class Teest {
 
     public static void main(String[] args) {
 
-        Graph g = new Graph();
+        Graph g = new Graph(); //creating an new graph 
 
-        String file = "teest\\twitter.csv";
-        BufferedReader reader = null;
+        String file = "teest\\twitter.csv";  //path
+        BufferedReader reader = null;     
         String line = "";
-        Graph graph = new Graph();
+        Graph graph = new Graph(); //creating a object from graph
 
         try {
-            reader = new BufferedReader(new FileReader(file));
+            reader = new BufferedReader(new FileReader(file));  //reading the csv file 
             while ((line = reader.readLine()) != null) {
-                String[] row = line.split(",");
-                g.addEdge(Integer.valueOf(row[1]), Integer.valueOf(row[0]));
+                String[] row = line.split(",");                 //spliting the two columns
+                g.addEdge(Integer.valueOf(row[1]), Integer.valueOf(row[0])); //adding both of them into the graph
 
             }
         }
 
         catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace();  //error masseges
         }
 
         finally {
