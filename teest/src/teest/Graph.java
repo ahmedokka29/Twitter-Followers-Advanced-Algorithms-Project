@@ -31,9 +31,9 @@ public class Graph {
                 counter=followers.remove(followers.size()-1);       //get number of followers for this account (we select last index of each arraylist for counter of followers in this arraylist)
                 followers.add(v);                                     //add follower id
 
-                counter++;                                          
-                followers.add(counter);                           
-                graph.put(k, followers);
+                counter++;                                          //number of followers++
+                followers.add(counter);                             //add counter at last index of arraylist after updating number of followers
+                graph.put(k, followers);                            
                    
              }
          }   
