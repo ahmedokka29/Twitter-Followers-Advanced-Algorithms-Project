@@ -33,7 +33,7 @@ public class Graph {
 
                 counter++;                                          //number of followers++
                 followers.add(counter);                             //add counter at last index of arraylist after updating number of followers
-                graph.put(k, followers);                            
+                graph.put(k, followers);                            //add account id and arraylist of his followers in " key / value " pairs 
                    
              }
          }   
