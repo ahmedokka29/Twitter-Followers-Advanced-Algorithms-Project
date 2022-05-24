@@ -4,6 +4,7 @@ package teest;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -42,13 +43,16 @@ public class Teest {
         System.out.println();
         System.out.print("Top Influencer ");
         g.TopInfluencer(1);
-        System.out.println();
-        System.out.print("Second ");
-        g.TopInfluencer(2);
-        System.out.println();
-        System.out.print("Third ");
-        g.TopInfluencer(3);
-        System.out.println();
+        // System.out.println();
+        // System.out.print("Second ");
+        // g.TopInfluencer(2);
+        // System.out.println();
+        // System.out.print("Third ");
+        // g.TopInfluencer(3);
+        // System.out.println();
+        // Scanner scanner = new Scanner(System.in);
+        // int x = scanner.nextInt();
+        // g.TopInfluencer(x);
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -82,8 +86,8 @@ public class Teest {
         recommendation2 o = new recommendation2(id,g);
         o.MaxLength();
 
-        System.out.println(g.graph.get(61989945));
-        System.out.println(g.graph.get(532655718));
+        // System.out.println(g.graph.get(61989945));
+        // System.out.println(g.graph.get(532655718));
         
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
