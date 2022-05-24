@@ -22,7 +22,7 @@ public class recommendation2 {
     }
 
     public void MaxLength() {
-        for (Object i : kset) {
+        for (Object i : kset) { //looping on every k in the graph O(n) where n is the number of keys  
 
             if (o.MaxLength(id, (Integer) i, r.get(id), r.get(i), r.get(id).size(), r.get(i).size()) > 10) {
                 System.out.println(id + ", You have a new account suggestion to follow -->  " + (Integer) i);
