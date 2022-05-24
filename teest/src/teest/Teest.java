@@ -38,21 +38,17 @@ public class Teest {
             }
         }
 
-        // System.out.println("Number of accounts = "+g.sizee());
-        // System.out.println();
-        // System.out.println();
-        // System.out.print("Top Influencer ");
-        // g.TopInfluencer(1);
-        // System.out.println();
-        // System.out.println();
-        // System.out.print("Second ");
-        // g.TopInfluencer(2);
-        // System.out.println();
-        // System.out.println();
-        // System.out.print("Third ");
-        // g.TopInfluencer(3);
-        // System.out.println();
-        // System.out.println();
+        System.out.println("Number of accounts = "+g.sizee());
+        System.out.println();
+        System.out.print("Top Influencer ");
+        g.TopInfluencer(1);
+        System.out.println();
+        System.out.print("Second ");
+        g.TopInfluencer(2);
+        System.out.println();
+        System.out.print("Third ");
+        g.TopInfluencer(3);
+        System.out.println();
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -82,13 +78,13 @@ public class Teest {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        // int id=532655718;
-        // recommendation2 o = new recommendation2(id,g);
-        // o.MaxLength();
+        int id=532655718;
+        recommendation2 o = new recommendation2(id,g);
+        o.MaxLength();
 
-        // System.out.println(g.graph.get(61989945));
-        // System.out.println(g.graph.get(532655718));
-        //
+        System.out.println(g.graph.get(61989945));
+        System.out.println(g.graph.get(532655718));
+        
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
