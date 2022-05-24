@@ -24,7 +24,7 @@ public class recommendation2 {
     public void MaxLength() {
         for (Object i : kset) {
 
-            if (o.MaxLength(id, (Integer) i, r.get(id), r.get(i), r.get(id).size(), r.get(i).size()) > 100) {
+            if (o.MaxLength(id, (Integer) i, r.get(id), r.get(i), r.get(id).size(), r.get(i).size()) > 70) {
                 System.out.println(id + ", You have a new account suggestion to follow -->  " + (Integer) i);
                 System.out.println(o.MaxLength(id, (Integer) i, r.get(id), r.get(i), r.get(id).size(), r.get(i).size())
                         + "  mutual followers");
