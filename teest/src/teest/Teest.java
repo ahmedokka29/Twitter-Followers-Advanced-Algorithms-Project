@@ -42,6 +42,9 @@ public class Teest {
         System.out.println();
         System.out.print("Top Influencer ");
         g.TopInfluencer(1);
+
+        recommendation2 r = new recommendation2(12, g);
+        r.MaxLength();
         // System.out.println();
         // System.out.print("Second ");
         // g.TopInfluencer(2);
